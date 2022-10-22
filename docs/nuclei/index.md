@@ -7,11 +7,11 @@ toc: true
 
 ## Features
 
--   HTTP | DNS | TCP | FILE support
--   Fully configurable templates.
--   Large scale scanning.
--   Out of band based detection.
--   Easily write your own templates.
+- HTTP | DNS | TCP | FILE support
+- Fully configurable templates.
+- Large scale scanning.
+- Out of band based detection.
+- Easily write your own templates.
 
 ## **Nuclei** Installation
 
@@ -55,8 +55,8 @@ Nuclei require the latest **GO** version to install successfully.
 https://github.com/projectdiscovery/nuclei/releases
 ```
 
--   Download the latest binary for your OS.
--   Unzip the ready to run binary.
+- Download the latest binary for your OS.
+- Unzip the ready to run binary.
 
 ## Nuclei **Templates**
 
@@ -220,15 +220,15 @@ Nuclei engine supports three basic filters to customize template execution.
 
 1. Tags (`-tags`)
 
-    Filter based on tags field available in the template.
+   Filter based on tags field available in the template.
 
 2. Severity (`-severity`)
 
-    Filter based on severity field available in the template.
+   Filter based on severity field available in the template.
 
 3. Author (`-author`)
 
-    Filter based on author field available in the template.
+   Filter based on author field available in the template.
 
 As default, Filters are applied on installed path of templates and can be customized with manual template path input.
 
@@ -256,10 +256,6 @@ Similarly, all filters are supported in workflows as well.
 nuclei -w workflows/wordpress-workflow.yaml -severity critical,high -list http_urls.txt
 ```
 
-!!! info "Workflows"
-
-    In Workflows, Nuclei filters are applied on templates or sub-templates running via workflows, not on the workflows itself.
-
 ### Rate **Limits**
 
 Nuclei have multiple rate limit controls for multiple factors, including a number of templates to execute in parallel, a number of hosts to be scanned in parallel for each template, and the global number of request / per second you wanted to make/limit using nuclei, here is an example of each flag with description.
@@ -284,8 +280,8 @@ Many BugBounty platform/programs requires you to identify the HTTP traffic you m
 ```yaml
 # Headers to include with each request.
 header:
-    - "X-BugBounty-Hacker: h1/geekboy"
-    - "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) / nuclei"
+  - "X-BugBounty-Hacker: h1/geekboy"
+  - "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) / nuclei"
 ```
 
 !!! info "Setting custom header using CLI flag"
@@ -298,7 +294,7 @@ nuclei -header 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) / nuclei' -list
 
 Nuclei supports a variety of methods for excluding / blocking templates from execution. By default, **nuclei** excludes the tags/templates listed below from execution to avoid unexpected fuzz based scans and some that are not supposed to run for mass scan, and these can be easily overwritten with nuclei configuration file / flags.
 
--   Default [Template ignore](https://github.com/projectdiscovery/nuclei-templates/blob/master/.nuclei-ignore) list.
+- Default [Template ignore](https://github.com/projectdiscovery/nuclei-templates/blob/master/.nuclei-ignore) list.
 
 **nuclei-ignore** file is not supposed to be updated / edited / removed by user, to overwrite default ignore list, utilize [nuclei configuration](https://nuclei.projectdiscovery.io/nuclei/get-started/#nuclei-config) file.
 
@@ -437,11 +433,11 @@ For example, to create tickets on GitHub, create a config file with the followin
 # Github contains configuration options for GitHub issue tracker
 
 github:
-    username: "$user"
-    owner: "$user"
-    token: "$token"
-    project-name: "testing-project"
-    issue-label: "Nuclei"
+  username: "$user"
+  owner: "$user"
+  token: "$token"
+  project-name: "testing-project"
+  issue-label: "Nuclei"
 ```
 
 **Running nuclei with reporting module:-**
@@ -454,7 +450,7 @@ Similarly, other platforms can be configured. Reporting module also supports bas
 
 ```yaml
 allow-list:
-    severity: high,critical
+  severity: high,critical
 ```
 
 This will ensure to only creating tickets for issues identified with **high** and **critical** severity; similarly, `deny-list` can be used to exclude issues with a specific severity.
@@ -491,16 +487,16 @@ curl -s localhost:9092/metrics | jq .
 
 ```json
 {
-    "duration": "0:00:03",
-    "errors": "2",
-    "hosts": "1",
-    "matched": "0",
-    "percent": "99",
-    "requests": "350",
-    "rps": "132",
-    "startedAt": "2021-03-27T18:02:18.886745+05:30",
-    "templates": "256",
-    "total": "352"
+  "duration": "0:00:03",
+  "errors": "2",
+  "hosts": "1",
+  "matched": "0",
+  "percent": "99",
+  "requests": "350",
+  "rps": "132",
+  "startedAt": "2021-03-27T18:02:18.886745+05:30",
+  "templates": "256",
+  "total": "352"
 }
 ```
 

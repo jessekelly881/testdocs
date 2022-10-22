@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/jessekelly/.nvm/versions/node/v16.16.0/bin/node /opt/homebrew/bin/yarn add vite-plugin-mkcert -D
+  /Users/jessekelly/.nvm/versions/node/v16.16.0/bin/node /opt/homebrew/bin/yarn docs:dev
 
 PATH: 
   /Users/jessekelly/bin:/opt/homebrew/opt/libxml2/bin:/Users/jessekelly/.nvm/versions/node/v16.16.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/aria2/bin:/Users/jessekelly/.cargo/bin

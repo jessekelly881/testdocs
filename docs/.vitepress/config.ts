@@ -32,24 +32,23 @@ export default defineConfig({
 
     editLink: {
       pattern: "https://github.com/vituum/docs/edit/main/docs/:path",
-      text: "Suggest changes to this page",
+      text: "Edit this page",
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vituum/vituum" },
-      { icon: "twitter", link: "https://twitter.com/vituum_dev" },
+      { icon: "github", link: "https://github.com/projectdiscovery" },
+      { icon: "twitter", link: "https://twitter.com/pdiscoveryio" },
     ],
 
     algolia: {
       appId: "VB79JXJIAA",
       apiKey: "a7c609cdca4e22d1249ab92a68d1d5ed",
-      indexName: "vituum",
+      indexName: "projectdiscovery",
     },
 
     footer: {
       message: `Released under the MIT License.`,
-      copyright:
-        "Copyright © 2022-present lubomirblazek.cz, newlogic.cz & Vituum Contributors",
+      copyright: "Copyright © 2022-present ProjectDiscovery",
     },
 
     nav: [
@@ -73,7 +72,6 @@ export default defineConfig({
         ],
       },
     ],
-
     sidebar: {
       "/nuclei/": [
         {
