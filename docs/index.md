@@ -17,7 +17,7 @@ hero:
       link: /nuclei/
     - theme: alt
       text: LFIC
-      link: /lfic/features
+      link: /lfic/
     - theme: alt
       text: GitHub
       link: https://github.com/projectdiscovery
