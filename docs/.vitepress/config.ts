@@ -41,9 +41,9 @@ export default defineConfig({
     ],
 
     algolia: {
-      appId: "VB79JXJIAA",
-      apiKey: "a7c609cdca4e22d1249ab92a68d1d5ed",
-      indexName: "projectdiscovery",
+      appId: "R27DB1CLS2",
+      apiKey: "6294b36678a44b7d03aad93f79ad8b51",
+      indexName: "pages",
     },
 
     footer: {
