@@ -1,44 +1,44 @@
 ---
 layout: home
 
-title: Vituum
+title: ProjectDiscovery
 titleTemplate: Fast prototyping with template engines and integrated frontend tools
 
 hero:
-  name: Vituum
-  text: Is Vite with predefined config and integrations
-  tagline: Fast prototyping with template engines and integrated frontend tools
+  name: ProjectDiscovery
+  text: ""
+  tagline: Documentation for project discovery projects
   image:
     src: /logo.svg
     alt: Vituum
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/
+      text: Nuclei
+      link: /nuclei/
     - theme: alt
-      text: About Vituum
-      link: /guide/features
+      text: LFIC
+      link: /lfic/features
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/vituum/vituum
+      text: GitHub
+      link: https://github.com/projectdiscovery
 
 features:
   - icon: ⚡️
-    title: Vite integrated
-    details: Blazing fast and next generation frontend tooling. Vituum is a wrapper around Vite.
+    title: Something
+    details: Some description
   - icon: 🚀️️
-    title: Fast prototyping
-    details: Vituum has multi-page support, so you can prototype fast with various templates.
+    title: Something
+    details: Some description
   - icon: 🛠️
-    title: Integrated tools and plugins
-    details: All modern frontend features cooked-in on top of Vite, out of the box and ready to go.
+    title: Something
+    details: Some description
   - icon: 💡
-    title: Template engines
-    details: They are great for preparing website templates fast for various backend integrations.
+    title: Something
+    details: Some description
   - icon: 📦
-    title: Modular structure
-    details: Pre-defined optional structure for your project files.
-  - icon: ✉️ 
-    title: Email templates
-    details: Writing email templates was always tricky. Vituum tries to make it easier for you.
+    title: Something
+    details: Some description
+  - icon: ✉️
+    title: Something
+    details: Some description
 ---

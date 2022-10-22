@@ -1,0 +1,44 @@
+Arguments: 
+  /Users/jessekelly/.nvm/versions/node/v16.16.0/bin/node /opt/homebrew/bin/yarn
+
+PATH: 
+  /Users/jessekelly/bin:/opt/homebrew/opt/libxml2/bin:/Users/jessekelly/.nvm/versions/node/v16.16.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/aria2/bin:/Users/jessekelly/.cargo/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.16.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: Failed to replace env in config: ${NPM_TOKEN}
+      at /opt/homebrew/lib/node_modules/yarn/lib/cli.js:99004:13
+      at String.replace (<anonymous>)
+      at envReplace (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:98999:16)
+      at Function.normalizeConfig (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:31930:69)
+      at NpmRegistry.<anonymous> (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:31960:34)
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /opt/homebrew/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "scripts": {
+      "docs:dev": "vitepress dev docs",
+      "docs:build": "vitepress build docs",
+      "docs:serve": "vitepress serve docs"
+    },
+    "dependencies": {
+      "vitepress": "^1.0.0-alpha.10",
+      "vue": "^3.2.37"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
