@@ -84,16 +84,8 @@ export default defineConfig({
               link: "/nuclei/",
             },
             {
-              text: "Features",
-              link: "/nuclei/features",
-            },
-            {
-              text: "Template engines",
-              link: "/nuclei/template-engines",
-            },
-            {
-              text: "Integrations",
-              link: "/nuclei/integrations",
+              text: "Blog",
+              link: "/nuclei/blog",
             },
           ],
         },

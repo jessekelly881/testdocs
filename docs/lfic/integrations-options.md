@@ -1,6 +1,6 @@
 # Integrations Options
 
-See [Integrations API](/guide/integrations) to learn more about this section.
+See [Integrations API](/lfic/integrations-options) to learn more about this section.
 
 ## integrations
 
@@ -83,12 +83,14 @@ SMTP Password from to send, you can also use `VITUUM_SMTP_PASS` in `.env` file.
 ## [@vituum/posthtml](https://www.npmjs.com/package/@vituum/posthtml)
 
 ### plugins
+
 - **Type:** `(Plugin | Plugin[] | Promise<Plugin | Plugin[]>)[]`
 - **Default:** `[]`
 
 Additional PostHTML plugins to use. See PostHTML [GitHub](https://github.com/posthtml) for list of all official plugins.
 
 ### options
+
 - **Type:** `object`
 - **Default:** `{}`
 
@@ -97,59 +99,69 @@ Additional PostHTML options to use. See PostHTML [options](https://posthtml.org/
 ## [@vituum/twig](https://www.npmjs.com/package/@vituum/twig)
 
 ### reload
+
 - **Type:** `boolean` or `function`
 - **Default:** `true`
 
 Whenever to auto-reload browser window upon `html`, `twig` or `json` file change. You can provide function to filter upon which file a reload should occur.
 
 ### root
+
 - **Type:** `string`
 - **Default:** `null`
 
 Root is inherited from Vite `root` by default. For example, you can change this to `resolve(process.cwd(), 'src/templates')`, then you can use includes with paths defaulting to this directory.
 
 ### filters
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object of named filter functions to use, see TwigJS [wiki](https://github.com/twigjs/twig.js/wiki/Extending-twig.js#filters) for more info.
 
 ### functions
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object of named functions to use, see TwigJS [wiki](https://github.com/twigjs/twig.js/wiki/Extending-twig.js#functions) for more info.
 
 ### extensions
+
 - **Type:** `function[]`
 - **Default:** `[]`
 
 Array of functions that extend TwigJS with custom tag, see TwigJS [wiki](https://github.com/twigjs/twig.js/wiki/Extending-twig.js-With-Custom-Tags) for more info.
 
 ### namespaces
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object defining namespaces, see TwigJS [wiki](https://github.com/twigjs/twig.js/wiki#namespaces) for more info.
 
 ### data
+
 - **Type:** `string`
 - **Default:** `''`
 
 Path to additional data provided with json file. Can be a file, or a glob like this `/path/to/*.jsom`.
 
 ### globals
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Other global data to use. Can be `object` or `function` returning object, or combination of both.
 
 ### filetypes
+
 - **Type:** `object`
 
 Which type of ext-names should be processed by the plugin.
 
 For example, this is by default in **Vituum**.
+
 ```javascript
 {
     html: config.templates.format === 'twig' ? /.(json|json.html|twig.json|twig.json.html|twig|twig.html)$/ : /.(twig.json|twig.json.html|twig|twig.html)$/,
@@ -158,12 +170,14 @@ For example, this is by default in **Vituum**.
 ```
 
 ### twig.compileOptions
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Additional TwigJS compileOptions, see TwigJS [wiki](https://github.com/twigjs/twig.js/wiki) for more info. It's not well documented.
 
 ### twig.renderOptions
+
 - **Type:** `object`
 - **Default:** `{}`
 
@@ -172,53 +186,62 @@ Additional TwigJS renderOptions, see TwigJS [wiki](https://github.com/twigjs/twi
 ## [@vituum/latte](https://www.npmjs.com/package/@vituum/latte)
 
 ### reload
+
 - **Type:** `boolean` or `function`
 - **Default:** `true`
 
 Whenever to auto-reload browser window upon `html`, `latte` or `json` file change. You can provide function to filter upon which file a reload should occur.
 
 ### root
+
 - **Type:** `string`
 - **Default:** `null`
 
 Root is inherited from Vite `root` by default. For example, you can change this to `resolve(process.cwd(), 'src/templates')`, then you can use includes with paths defaulting to this directory.
 
 ### filters
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object of named filters to use. Can be function or string providing path to `.php` file. See examples [here](https://github.com/vituum/vite-plugin-latte/tree/main/latte) or official docs [here](https://latte.nette.org/en/extending-latte#toc-filters).
 
 ### functions
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object of named functions to use. Can be function or string providing path to `.php` file. See examples [here](https://github.com/vituum/vite-plugin-latte/tree/main/latte) or official docs [here](https://latte.nette.org/en/extending-latte#toc-functions).
 
 ### tags
+
 - **Type:** `function[]`
 - **Default:** `[]`
 
 Object of named tags to use. Only a string providing path to `.php` file. See official docs [here](https://latte.nette.org/en/extending-latte#toc-tags).
 
 ### data
+
 - **Type:** `string`
 - **Default:** `''`
 
 Path to additional data provided with json file. Can be a file, or a glob like this `/path/to/*.jsom`.
 
 ### globals
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Other global data to use. Can be `object` or `function` returning object, or combination of both.
 
 ### filetypes
+
 - **Type:** `object`
 
 Which type of ext-names should be processed by the plugin.
 
 For example, this is by default in **Vituum**.
+
 ```javascript
 {
     html: config.templates.format === 'latte' ? /.(json|json.html|latte.json|latte.json.html|latte|latte.html)$/ : /.(latte.json|latte.json.html|latte|latte.html)$/,
@@ -229,42 +252,49 @@ For example, this is by default in **Vituum**.
 ## [@vituum/liquid](https://www.npmjs.com/package/@vituum/liquid)
 
 ### reload
+
 - **Type:** `boolean` or `function`
 - **Default:** `true`
 
 Whenever to auto-reload browser window upon `html`, `liquid` or `json` file change. You can provide function to filter upon which file a reload should occur.
 
 ### root
+
 - **Type:** `string`
 - **Default:** `null`
 
 Root is inherited from Vite `root` by default. For example, you can change this to `resolve(process.cwd(), 'src/templates')`, then you can use includes with paths defaulting to this directory.
 
 ### filters
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object of named filter functions to use, see LiquidJS [docs](https://liquidjs.com/tutorials/register-filters-tags.html#Register-Filters) for more info.
 
 ### tags
+
 - **Type:** `function[]`
 - **Default:** `[]`
 
 Array of functions that extend LiquidJS with custom tag, see LiquidJS [docs](https://liquidjs.com/tutorials/register-filters-tags.html#Register-Tags) for more info.
 
 ### data
+
 - **Type:** `string`
 - **Default:** `''`
 
 Path to additional data provided with json file. Can be a file, or a glob like this `/path/to/*.jsom`.
 
 ### globals
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Other global data to use. Can be `object` or `function` returning object, or combination of both.
 
 ### filetypes
+
 - **Type:** `object`
 
 Which type of ext-names should be processed by the plugin.
@@ -281,42 +311,49 @@ For example, this is by default in **Vituum**.
 ## [@vituum/nunjucks](https://www.npmjs.com/package/@vituum/nunjucks)
 
 ### reload
+
 - **Type:** `boolean` or `function`
 - **Default:** `true`
 
 Whenever to auto-reload browser window upon `html`, `njk` or `json` file change. You can provide function to filter upon which file a reload should occur.
 
 ### root
+
 - **Type:** `string`
 - **Default:** `null`
 
 Root is inherited from Vite `root` by default. For example, you can change this to `resolve(process.cwd(), 'src/templates')`, then you can use includes with paths defaulting to this directory.
 
 ### filters
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object of named filter functions to use, see Nunjucks [docs](https://mozilla.github.io/nunjucks/api.html#custom-filters) for more info.
 
 ### extensions
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object of named extensions to use, see Nunjucks [docs](https://mozilla.github.io/nunjucks/api.html#custom-tags) for more info.
 
 ### data
+
 - **Type:** `string`
 - **Default:** `''`
 
 Path to additional data provided with json file. Can be a file, or a glob like this `/path/to/*.jsom`.
 
 ### globals
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Other global data to use. Can be `object` or `function` returning object, or combination of both.
 
 ### filetypes
+
 - **Type:** `object`
 
 Which type of ext-names should be processed by the plugin.
@@ -331,6 +368,7 @@ For example, this is by default in **Vituum**.
 ```
 
 ### nunjucks
+
 - **Type:** `object`
 - **Default:** `{}`
 
@@ -339,36 +377,42 @@ Additional Nunjucks options, see Nunjucks [docs](https://mozilla.github.io/nunju
 ## [@vituum/pug](https://www.npmjs.com/package/@vituum/pug)
 
 ### reload
+
 - **Type:** `boolean` or `function`
 - **Default:** `true`
 
 Whenever to auto-reload browser window upon `html`, `pug` or `json` file change. You can provide function to filter upon which file a reload should occur.
 
 ### root
+
 - **Type:** `string`
 - **Default:** `null`
 
 Root is inherited from Vite `root` by default. For example, you can change this to `resolve(process.cwd(), 'src/templates')`, then you can use includes with paths defaulting to this directory.
 
 ### filters
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object of named filter functions to use, see Pug [docs](https://pugjs.org/language/filters.html#custom-filters) for more info.
 
 ### data
+
 - **Type:** `string`
 - **Default:** `''`
 
 Path to additional data provided with json file. Can be a file, or a glob like this `/path/to/*.jsom`.
 
 ### globals
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Other global data to use. Can be `object` or `function` returning object, or combination of both.
 
 ### filetypes
+
 - **Type:** `object`
 
 Which type of ext-names should be processed by the plugin.
@@ -383,6 +427,7 @@ For example, this is by default in **Vituum**.
 ```
 
 ### pug
+
 - **Type:** `object`
 - **Default:** `{}`
 
@@ -391,48 +436,56 @@ Additional Pug options, see Pug [docs](https://pugjs.org/api/reference.html) for
 ## [@vituum/handlebars](https://www.npmjs.com/package/@vituum/handlebars)
 
 ### reload
+
 - **Type:** `boolean` or `function`
 - **Default:** `true`
 
 Whenever to auto-reload browser window upon `html`, `hbs` or `json` file change. You can provide function to filter upon which file a reload should occur.
 
 ### root
+
 - **Type:** `string`
 - **Default:** `null`
 
 Root is inherited from Vite `root` by default. For example, you can change this to `resolve(process.cwd(), 'src/templates')`, then you can use includes with paths defaulting to this directory.
 
 ### helpers
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Object of named helper functions to use, see Handlebars [docs](https://handlebarsjs.com/api-reference/helpers.html) for more info.
 
 ### data
+
 - **Type:** `string`
 - **Default:** `''`
 
 Path to additional data provided with json file. Can be a file, or a glob like this `/path/to/*.jsom`.
 
 ### globals
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Other global data to use. Can be `object` or `function` returning object, or combination of both.
 
 ### partials.directory
+
 - **Type:** `string`
 - **Default:** `null`
 
 Root directory for partials. Directory is inherited from plugin `root` by default.
 
 ### partials.extname
+
 - **Type:** `boolean`
 - **Default:** `true`
 
 Whenever to use ext-name in partial path like this `"path/to/partial.hbs`
 
 ### filetypes
+
 - **Type:** `object`
 
 Which type of ext-names should be processed by the plugin.
@@ -447,12 +500,14 @@ For example, this is by default in **Vituum**.
 ```
 
 ### handlebars.compileOptions
+
 - **Type:** `object`
 - **Default:** `{}`
 
 Additional Handlebars compileOptions, see Handlebars [docs](https://handlebarsjs.com/api-reference/compilation.html) for more info. Not well documented actually.
 
 ### handlebars.runtimeOptions
+
 - **Type:** `object`
 - **Default:** `{}`
 

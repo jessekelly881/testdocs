@@ -5,19 +5,19 @@ title: Configuring Vite
 # Configuring Vituum
 
 Each **Vituum** project needs to have config via `vite.config.js` inside project root.<br>
-You can also use `.mjs`, `.ts` ext-name, this is same as [Vite config](https://vitejs.dev/config/). 
+You can also use `.mjs`, `.ts` ext-name, this is same as [Vite config](https://vitejs.dev/config/).
 
 The most basic config file looks like this:
 
 ```js
-import { defineConfig } from 'vituum'
+import { defineConfig } from "vituum";
 
 export default defineConfig({
-    // your config goes here
-})
+  // your config goes here
+});
 ```
 
-**Vituum** is a small wrapper around **Vite**, uses own options and overrides some settings by default and adds additional plugins. See [Main Options](/config/main-options) for more info about **Vituum** options. <br><br>
+**Vituum** is a small wrapper around **Vite**, uses own options and overrides some settings by default and adds additional plugins. See [Main Options](/lfic/main-options) for more info about **Vituum** options. <br><br>
 These are the main changes which **Vituum** overrides by default in **Vite** config:
 
 ```javascript
@@ -41,7 +41,7 @@ css: {
 },
 build: {
     manifest: vituum.build.manifest,
-    outDir: vituum.output, 
+    outDir: vituum.output,
     emptyOutDir: false,
     polyfillModulePreload: false,
     rollupOptions: {
