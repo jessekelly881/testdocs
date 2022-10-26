@@ -176,10 +176,6 @@
   line-height: 32px !important;
 }
 
-.DocSearch {
-  background-color: var(--vp-c-bg-alt);
-}
-
 .DocSearch-Search-Icon,
 .DocSearch-LoadingIndicator {
   width: 18px !important;
