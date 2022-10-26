@@ -2,15 +2,11 @@
 layout: home
 
 title: ProjectDiscovery
-titleTemplate: Fast prototyping with template engines and integrated frontend tools
 
 hero:
   name: ProjectDiscovery
   text: ""
   tagline: Documentation for project discovery projects
-  image:
-    src: /logo.svg
-    alt: Vituum
   actions:
     - theme: brand
       text: Nuclei
@@ -30,15 +26,6 @@ features:
     title: Something
     details: Some description
   - icon: 🛠️
-    title: Something
-    details: Some description
-  - icon: 💡
-    title: Something
-    details: Some description
-  - icon: 📦
-    title: Something
-    details: Some description
-  - icon: ✉️
     title: Something
     details: Some description
 ---
